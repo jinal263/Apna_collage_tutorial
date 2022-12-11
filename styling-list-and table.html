@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styling-list</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10x;
+            border-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Styling list</h1>
+    <h2>List-specific styles</h2>
+    <p>let's explore some list-specific properties. There are three properties you should know about to start with,
+        which can be set on
+        ul or ol elements:
+    <ul style="list-style-type:space-counter;">
+        <li>
+            <h3>list-style-type</h3>
+            <p> Sets the type of bullets to use for the list, for example, square or circle bullets for an unordered
+                list, or numbers, letters, or roman numerals for an ordered list.</p>
+            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type">for more info</a></h4>
+        </li>
+        <li>
+            <h3>list-style-position</h3>
+            <p>Sets whether the bullets, at the start of each item, appear inside or outside the lists.</p>
+            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position">visit for more info</a>
+            </h4>
+        </li>
+        <li>
+            <h3>list-style-image</h3>
+            <p> Allows you to use a custom image for the bullet, rather than a simple square or circle.
+            </p>
+            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image">visit for more info</a></h4>
+        </li>
+    </ul>
+    </p>
+    <table>
+        <caption>Styling table</caption>
+        <thead>
+            <th>table-layout</th>
+            <th> border-collapse </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>table-layout: auto</td>
+                <td>table-layout: fixed</td>
+            </tr>
+            <tr>
+                <td>border-collapse: collapse;</td>
+                <td>border-collapse: separate;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>The most important parts to note are as follows:</h4>
+    <ul>
+        <li>
+            <p>A table-layout value of fixed is generally a good idea to set on your table, as it makes the table behave
+                a bit
+                more predictably by default. Normally, table columns tend to be sized according to how much content they
+                contain, which produces some strange results. With table-layout: fixed, you can size your columns
+                according to
+                the width of their headings, and then deal with their content as appropriate. This is why we've selected
+                the
+                four different headings with the thead th:nth-child(n) (:nth-child) selector ("Select the n-th child
+                that is a
+                th element in a sequence, inside a thead element") and given them set percentage widths. The entire
+                column
+                width follows the width of its heading, making for a nice way to size your table columns. Chris
+                Coyier
+                discusses this technique in more detail in Fixed Table Layouts. We've coupled this with a width
+                of 100%,
+                meaning that the table will fill any container it is put in, and be nicely responsive (although
+                it would
+                still need some more work to get it looking good on narrow screen widths).
+            </p>
+        </li>
+        <li>
+            <p>A border-collapse value of collapse is standard best practice for any table styling effort. By default,
+                when you set borders on table elements, they will all have spacing between them, as the below image
+                illustrates:</p>
+        </li>
+    </ul>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">for more info</a>
+</body>
+
+</html>

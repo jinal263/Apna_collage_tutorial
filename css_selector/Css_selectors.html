@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_selectors.css">
+    <title>Css_selector</title>
+</head>
+
+<body>
+    <header>
+        <h1>Css selectors</h1>
+    </header>
+    <hr>
+    <p id="header"> In CSS, selectors are patterns used to select the element(s) you want to style. </p>
+    <hr>
+    <div class="class">
+        <h2>Basic Selectors</h2>
+        <ol>
+            <li>
+                <h3>Universal Selector</h3>
+                <p>Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.
+                </p>
+                <em>Example: * will match all the elements of the document. </em>
+            </li>
+            <li>
+                <h3>Type selector</h3>
+                <p>Selects all elements that have the given node name.</p>
+                <em>Syntax: elementname{}</em>
+            </li>
+            <li>
+                <h3>Class selector</h3>
+                <p>Selects all elements that have the given class attribute.</p>
+                <em>Syntax: .classname
+
+                    Example: .index will match any element that has class="index".
+
+                </em>
+            </li>
+            <li>
+                <h3>ID selector</h3>
+                <p>Selects an element based on the value of its id attribute. There should be only one element with a
+                    given
+                    ID in a document.</p>
+                <em>Syntax: #idname
+
+                    Example: #toc will match the element that has id="toc".</em>
+            </li>
+            <li>
+                <h3>Attribute Selector</h3>
+                <p>Selects all elements that have the given attribute.</p>
+                <em>Syntax: [attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]
+
+                    Example: [autoplay] will match all elements that have the autoplay attribute set (to any
+                    value).</em>
+                for more information visit<a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Attribute_selectors</a>
+            </li>
+        </ol>
+    </div>
+    <hr>
+    <div class="class">
+        <h2>Grouping Selectors</h2>
+        <ol>
+            <li>
+                <h2>Selector list</h2>
+                <p>When multiple selectors share the same declarations, they can be grouped together into a
+                    comma-separated list. Selector lists can also be passed as parameters to some functional CSS
+                    pseudo-classes. White space may appear before and/or after the comma.</p>
+                <em>
+                    Example: div, span will match both <span> and <div> elements.
+                            <br>
+                            span {
+                            border: red 2px solid;
+                            }
+                            div {
+                            border: red 2px solid;
+                            }
+                            <br>
+                            span,
+                            div {
+                            border: red 2px solid;
+                            }
+            </li>
+        </ol>
+    </div>
+    <hr>
+    <div class="class">
+        <h2>Combinators</h2>
+        <ol>
+            <li>
+                <h2>Descendant Combinator</h2>
+                <p>The " " (space) combinator selects nodes that are descendants of the first element.</p>
+                <em>Syntax: A B
+                    Example: div span will match all <span> elements that are inside a <div> element
+                </em>
+                <h2><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator">visit the
+                        example</a></h2>
+                <br>
+            </li>
+            <li>
+                <h2>Child Combinator </h2>
+                <p>The > combinator selects nodes that are direct children of the first element.</p>
+                <em>Syntax: A > B
+                    <br>
+                    Example: ul > li will match all
+                    li elements that are nested directly inside a ul element.
+                </em>
+            </li>
+            <li>
+                <h2>General sibling combinator</h2>
+                <p>The ~ combinator selects siblings. This means that the second element follows the first (though not
+                    necessarily immediately), and both share the same parent.
+                </p>
+                <p>Syntax: A ~ B </p>
+                <em>Example: p ~ span will match all span elements that follow a p element , immediately or not.</em>
+            </li>
+            <li>
+                <h2>Adjacent sibling combinator</h2>
+                <p>The + combinator matches the second element only if it immediately follows the first element.</p>
+                <em>Syntax: A + B
+                    <br>
+                    Example: h2 + p will match the first p element that immediately follows an h2 element.</em>
+            </li>
+            <li>
+                <h2>Column combinator</h2>
+                <p>The || combinator selects nodes which belong to a column.</p>
+                <em>Syntax: A || B
+                    <br>
+                    Example: col || td will match all td elements that belong to the scope of the
+                    col.
+                </em>
+            </li>
+        </ol>
+    </div>
+    <hr>
+    <div class="class">
+        <h2>Pseudo-classes and pseudo-elements</h2>
+        <ul>
+            <li>
+                <h2>Pseudo classes</h2>
+                <p>A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected
+                    element(s). For example, the pseudo-class :hover can be used to select a button when a user's
+                    pointer hovers over the button and this selected button can then be styled.
+                </p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">visit for more info</a>
+                <em>Example: a:visited will match all <a> elements that have been visited by the user.</em>
+            </li>
+            <li>
+                <h2>pseudo elements</h2>
+                <p>A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the
+                    selected element(s). For example, ::first-line can be used to change the font of the first line of a
+                    paragraph.</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">visit for more info</a>
+                <em>Example: p::first-line will match the first line of all <p> elements.</em>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>Structure of a selector</h2>
+        <p>the term 'selector' can refer to one of the following :</p>
+        <ul type="square">
+            <li>
+                <h3>Simple selector</h3>
+                <p>A selector with a single component, such as a single id selector or type selector, that's not used in
+                    combination with or contains any other selector component or combinator. A given element is said to
+                    match a simple selector when that simple selector accurately describes the element. All basic
+                    selectors, attributes, and single pseudo-classes and pseudo-elements are simple selectors.</p>
+            </li>
+            <li>
+                <h3>Compound selector</h3>
+                <p>A sequence of simple selectors that are not separated by a combinator. A compound selector represents
+                    a set of simultaneous conditions on a single element. A given element is said to match a compound
+                    selector when the element matches all the simple selectors in the compound selector.
+
+                    In a compound selector, the type selector or a universal selector in a compound selector must come
+                    first in the sequence of selectors. Only one type selector or universal selector is allowed in the
+                    sequence. Since whitespace represents the descendant combinator, no whitespace is allowed between
+                    the simple selectors in a compound selector.</p>
+                <em>Example: a#selected {...} </em>
+            </li>
+            <li>
+                <h3>Complex selector</h3>
+                <p>A sequence of one or more simple and/or compound selectors that are separated by combinators. A
+                    complex selector represents a set of simultaneous conditions on a set of elements. These conditions
+                    apply in the context of relationships described by the combinators. A given element is said to match
+                    a complex selector when the element matches compound selectors and the combinators between the
+                    compound selectors.
+                </p>
+                <em>Examples: a#selected > .icon {...}, .box h2 + p {...}, a .icon {...}</em>
+            </li>
+            <li>
+                <h3>Relative selector</h3>
+                <p>A selector that represents an element relative to one or more anchor elements preceded by a
+                    combinator. Relative selectors that don't begin with an explicit combinator have an implied
+                    descendant combinator.</p>
+                <em>Examples: + div#topic > #reference {...}, > .icon {...}
+
+                </em>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

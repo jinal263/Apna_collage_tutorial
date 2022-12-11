@@ -1,0 +1,77 @@
+/*universal selector*/
+* {
+    box-sizing: border-box;
+}
+
+/*type selector */
+h1 {
+    text-align: center;
+}
+
+/* class selector*/
+.class {
+    text-align: justify;
+}
+
+/* id selector*/
+#header {
+    text-align: center;
+}
+
+/*Attribute selector*/
+a[href] {
+    background-color: gold;
+}
+
+/* Links that end in ".org" */
+a[href$=".org"] {
+    color: red;
+}
+
+/* Links that start with "https" and end in ".org" */
+a[href^="https"][href$=".org"] {
+    color: green;
+}
+
+
+/*************Group selector***********/
+h1,
+h2,
+h3 {
+    color: rgb(67, 53, 79);
+}
+
+/******Combinators*********/
+/* Descendant selector*/
+div h2 {
+    color: rgb(102, 113, 113);
+}
+
+/*Child Combinator*/
+div>ol>li {
+    color: rgb(75, 59, 59);
+}
+
+/*Genral sibling combinator*/
+h3~p {
+    color: rgb(77, 118, 113);
+}
+
+/* Adjacent sibling combinator*/
+
+h2+p {
+    color: rgb(60, 100, 100);
+}
+
+/* pseudo class*/
+/* Any button over which the user's pointer is hovering */
+button:hover {
+    color: blue;
+}
+
+/*pseudo element*/
+/* The first line of every <p> element. */
+p::first-line {
+    color: rgb(50, 50, 79);
+    text-transform: uppercase;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specificity of css</title>
+</head>
+
+<body>
+    <h1>Specifics on CSS Specificity</h1>
+    <h2>Calculating CSS Specificity Value</h2>
+    <p>Why is that our first attempt at changing the color and font-weight failed? As we learned, it was because simply
+        using the class name by itself had a lower specificity value and was trumped by the other selector which
+        targeted the unordered list with the ID value. The important words in that sentence were class and ID. CSS
+        applies vastly different specificity weights to classes and IDs. In fact, an ID has infinitely more specificity
+        value! That is, no amount of classes alone can outweigh an ID.</p>
+    \<h3>In otherwords:</h3>
+    <ul>
+        <li>If the element has inline styling, that automatically1 wins (1,0,0,0 points)</li>
+        <li>For each ID value, apply 0,1,0,0 points</li>
+        <li>For each class value (or pseudo-class or attribute selector), apply 0,0,1,0 points</li>
+        <li>For each element reference, apply 0,0,0,1 point</li>
+    </ul>
+    <p>You can generally read the values as if they were just a number, like 1,0,0,0 is “1000”, and so clearly wins over
+        a specificity of 0,1,0,0 or “100”. The commas are there to remind us that this isn’t really a “base 10” system,
+        in that you could technically have a specificity value of like 0,1,13,4 – and that “13” doesn’t spill over like
+        a base 10 system would.</p>
+
+    <h2><a href=" https://css-tricks.com/specifics-on-css-specificity/">visit for more info</a></h2>
+</body>
+
+
+</html>

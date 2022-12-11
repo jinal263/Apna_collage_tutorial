@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>Fonts in css</title>
+    <style>
+        h1 {
+            font-size: 50px;
+            font-family: 'Tangerine', serif;
+            color: rgb(133, 133, 96);
+            font-style: oblique;
+            font-weight: 2000;
+            text-decoration: overline;
+            text-shadow: 2px 2px 2px black,
+                2px 2px 2px black;
+            text-align: center;
+        }
+
+
+        h2 {
+            text-decoration: double;
+        }
+
+        p {
+            color: rgb(114, 65, 65);
+            line-height: 1.2;
+            font-weight: 300;
+            /*text-indent: 50px;*/
+            word-spacing: 5;
+            letter-spacing: 4;
+
+        }
+
+        ul>li {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fonts In Css</h1>
+    <p>The font CSS shorthand property sets all the different properties of an element's font. Alternatively, it sets an
+        element's font to a system font.
+    </p>
+    <p>As with any shorthand property, any individual value that is not specified is set to its corresponding initial
+        value (possibly overriding values previously set using non-shorthand properties). Though not directly settable
+        by font, the longhands font-size-adjust and font-kerning are also reset to their initial values.</p>
+    <hr>
+    <h2>Constituent properties</h2>
+    <ul>
+        <li>
+            <h3>font-family</h3>
+            <p>The font-family CSS property specifies a prioritized list of one or more font family names and/or generic
+                family names for the selected element.</p>
+            <p>/* A font family name and a generic family name */
+                font-family: "Gill Sans Extrabold", sans-serif;
+                font-family: "Goudy Bookletter 1911", sans-serif;</p>
+        </li>
+        <li>
+            <h3>font-size</h3>
+            <p>The font-size CSS property sets the size of the font. Changing the font size also updates the sizes of
+                the font size-relative <length> units, such as em, ex, and so forth.</p>
+            <p>/* absolute-size values */
+                font-size: xx-small;
+                font-size: x-small;
+                <br>
+                /* relative-size values */
+                font-size: smaller;
+                font-size: larger;
+                <br>
+                /* length values */
+                font-size: 12px;
+                font-size: 0.8em;
+            </p>
+        </li>
+        <li>
+            it may optionally include values for:
+            font-style<br>
+            font-variant<br>
+            font-weight<br>
+            font-stretch<br>
+            line-height
+        </li>
+    </ul>
+    <h2>Formatting taxt with css</h2>
+    <p>properties like:</p>
+    <ul>
+        <li>text-align</li>
+        <li>text-decoration</li>
+        <li>text-tranfrom(tranform text to uppercase or lowercase)</li>
+        <li>text-indent(The text-indent CSS property sets the length of empty space (indentation) that is put before
+            lines of text in a block.)</li>
+        <li>line-height</li>
+        <li>letter-spacing</li>
+        <li>word-spacing</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">visit for more info</a></li>
+        <li>text-shadow(text-shadow: 1px 1px 2px pink (x,y,z,color);)</li>
+    </ul>
+    <h3>Shorthand properties are CSS properties that let you set the values of multiple other CSS properties
+        simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets,
+        saving time and energy.
+
+        The CSS specification defines shorthand properties to group the definition of common properties acting on the
+        same theme. For instance, the CSS background property is a shorthand property that's able to define the values
+        of background-color, background-image, background-repeat, and background-position. Similarly, the most common
+        font-related properties can be defined using the shorthand font, and the different margins around a box can be
+        defined using the margin shorthand.</h3>
+    <h4>example:</h4>
+    <p>Background properties<br>
+        Consider a background with the following properties<br>
+
+        background-color: #000;<br>
+        background-image: url(images/bg.gif);<br>
+        background-repeat: no-repeat;<br>
+        background-position: left top;<br>
+        <br><br>
+        These four declarations can be shortened to just one:<br>
+
+        background: #000 url(images/bg.gif) no-repeat left top;<br>
+    </p>
+</body>
+
+</html>
